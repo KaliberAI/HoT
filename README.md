@@ -1,5 +1,5 @@
+# HoT
 
-remi_converted
 ![remi_converted](figure/remi_converted.gif)
 
 ![skeleton_pipeline](figure/skeleton_pipeline.png)
