@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-Time 2D/3D Pose Estimation</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #222; color: #eee; }
+        h1 { text-align: center; }
+        .container { display: flex; justify-content: center; gap: 40px; margin-top: 40px; }
+        .video-box { background: #333; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #111; }
+        .video-box h2 { text-align: center; }
+        img { display: block; margin: 0 auto; max-width: 960px; max-height: 720px; background: #111; border-radius: 6px; width: 960px; height: 720px; }
+    </style>
+</head>
+<body>
+    <h1>Real-Time 2D/3D Pose Estimation</h1>
+    <div class="container">
+        <div class="video-box">
+            <h2>2D Pose Overlay</h2>
+            <img src="/video_feed" alt="2D Pose Stream" id="video2d">
+        </div>
+        <div class="video-box">
+            <h2>3D Pose Plot</h2>
+            <img src="/pose3d_feed" alt="3D Pose Stream" id="video3d">
+        </div>
+    </div>
+</body>
+</html>
