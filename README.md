@@ -9,7 +9,7 @@ remi_converted
 
 <div align="center"><img src="figure/logo.png" width="33%"></div>
 
-<h1 align="center"> <a href="https://arxiv.org/pdf/2311.12028">⏳ Hourglass Tokenizer for Efficient Transformer-Based <br> 3D Human Pose Estimation [CVPR 2024 🔥]</a></h1>
+<h1 align="center"> <a href="https://arxiv.org/pdf/2311.12028">⏳ Hourglass Tokenizer for Efficient Transformer-Based <br> 3D Human Pose Estimation [CVPR 2024]</a></h1>
 
 <!-- <h1 align="center">⏳ Hourglass Tokenizer for Efficient Transformer-Based <br> 3D Human Pose Estimation [CVPR 2024 🔥]</h1> -->
 
@@ -21,6 +21,9 @@ This is the official implementation of the approach described in the paper of �
 > [**⏳ Hourglass Tokenizer for Efficient Transformer-Based 3D Human Pose Estimation**](https://arxiv.org/pdf/2311.12028),            
 > Wenhao Li, Mengyuan Liu, Hong Liu, Pichao Wang, Jialun Cai, Nicu Sebe             
 > *In IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2024*
+
+## News
+- Our ⏳ Hourglass Tokenizer (🔥HoT🔥) is upgraded to [🏆 Hierarchical Hourglass Tokenizer (💧H<sub>2</sub>oT🔥)](https://arxiv.org/pdf/2509.06956), TPAMI 2025. 
 
 ## 😮 Highlights
 
@@ -127,6 +130,13 @@ If you find our work useful in your research, please consider citing:
       booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
       pages={604--613},
       year={2024}
+    }
+
+    @article{li2025h2ot,
+      title={H$_2$OT: Hierarchical Hourglass Tokenizer for Efficient Video Pose Transformers},
+      author={Li, Wenhao and Liu, Mengyuan and Liu, Hong and Wang, Pichao and Lu, Shijian and Sebe, Nicu},
+      journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+      year={2025}
     }
 
 ## 👍 Acknowledgement
