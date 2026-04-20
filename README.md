@@ -1,4 +1,12 @@
 
+remi_converted
+![remi_converted](figure/remi_converted.gif)
+
+![skeleton_pipeline](figure/skeleton_pipeline.png)
+
+![tracking_pipeline](figure/tracking_pipeline.png)
+
+
 <div align="center"><img src="figure/logo.png" width="33%"></div>
 
 <h1 align="center"> <a href="https://arxiv.org/pdf/2311.12028">⏳ Hourglass Tokenizer for Efficient Transformer-Based <br> 3D Human Pose Estimation [CVPR 2024 🔥]</a></h1>
