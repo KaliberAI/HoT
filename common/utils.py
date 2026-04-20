@@ -200,3 +200,23 @@ def Load_model(args, model):
     model_dict.update(state_dict)
     model.load_state_dict(model_dict)
 
+def normalize_screen_coordinates(X, w, h):
+    """
+    Normalize 2D keypoint coordinates to [-1,1] range.
+    
+    Args:
+        X: numpy array of shape (*, 2) containing 2D keypoint coordinates
+        w: Width of the image
+        h: Height of the image
+        
+    Returns:
+        Normalized 2D coordinates in range [-1,1]
+    """
+    assert X.shape[-1] == 2
+    
+    # Normalize to [-1, 1]
+    X = X.copy()
+    X[..., 0] = X[..., 0] / w * 2 - 1
+    X[..., 1] = X[..., 1] / h * 2 - 1
+    
+    return X
