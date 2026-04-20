@@ -122,33 +122,35 @@ _C.DEBUG.SAVE_BATCH_IMAGES_PRED = False
 _C.DEBUG.SAVE_HEATMAPS_GT = False
 _C.DEBUG.SAVE_HEATMAPS_PRED = False
 
+config = _C
 
 def update_config(cfg, args):
     cfg.defrost()
     cfg.merge_from_file(args.cfg)
     cfg.merge_from_list(args.opts)
 
-    if args.modelDir:
+    # Safely check for modelDir and other optional args attributes
+    if hasattr(args, 'modelDir') and args.modelDir is not None: # <--- MODIFIED LINE
         cfg.OUTPUT_DIR = args.modelDir
 
-    # if args.logDir:
+    # If you uncomment other sections below in your original default.py, 
+    # they would also need similar hasattr checks:
+    # For example:
+    # if hasattr(args, 'logDir') and args.logDir is not None:
     #     cfg.LOG_DIR = args.logDir
     #
-    # if args.dataDir:
+    # if hasattr(args, 'dataDir') and args.dataDir is not None:
     #     cfg.DATA_DIR = args.dataDir
+    #     # Ensure these nested paths are also handled safely if args.dataDir exists
+    #     # but the specific cfg.DATASET.ROOT might not be relevant here for just loading config
+    #     if hasattr(cfg, 'DATASET') and hasattr(cfg.DATASET, 'ROOT'):
+    #          cfg.DATASET.ROOT = os.path.join(cfg.DATA_DIR, cfg.DATASET.ROOT)
+    #     if hasattr(cfg, 'MODEL') and hasattr(cfg.MODEL, 'PRETRAINED'):
+    #          cfg.MODEL.PRETRAINED = os.path.join(cfg.DATA_DIR, cfg.MODEL.PRETRAINED)
     #
-    # cfg.DATASET.ROOT = os.path.join(
-    #     cfg.DATA_DIR, cfg.DATASET.ROOT
-    # )
-    #
-    # cfg.MODEL.PRETRAINED = os.path.join(
-    #     cfg.DATA_DIR, cfg.MODEL.PRETRAINED
-    # )
-    #
-    # if cfg.TEST.MODEL_FILE:
-    #     cfg.TEST.MODEL_FILE = os.path.join(
-    #         cfg.DATA_DIR, cfg.TEST.MODEL_FILE
-    #     )
+    # if hasattr(args, 'TEST_MODEL_FILE') and args.TEST_MODEL_FILE and hasattr(cfg, 'DATA_DIR'): # Example
+    #     if hasattr(cfg, 'TEST') and hasattr(cfg.TEST, 'MODEL_FILE'):
+    #         cfg.TEST.MODEL_FILE = os.path.join(cfg.DATA_DIR, cfg.TEST.MODEL_FILE)
 
     cfg.freeze()
 

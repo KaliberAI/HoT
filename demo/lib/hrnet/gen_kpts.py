@@ -16,8 +16,7 @@ import cv2
 import copy
 
 from lib.hrnet.lib.utils.utilitys import plot_keypoint, PreProcess, write, load_json
-from lib.hrnet.lib.config import cfg, update_config
-from lib.hrnet.lib.utils.transforms import *
+from lib.hrnet.lib.config import cfg, update_config 
 from lib.hrnet.lib.utils.inference import get_final_preds
 from lib.hrnet.lib.models import pose_hrnet
 
